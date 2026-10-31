@@ -1,0 +1,22 @@
+---
+title: 'CVD Risk Analysis'
+author: 'Your Name'
+date: '[date]'
+output: html_document
+---
+
+This document analyzes CVD risk factors.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The code below calculates descriptive statistics:
+
+```{r descriptive-stats}
+# Load data
+data <- read.csv('cvd-data.csv')
+
+# Calculate mean age
+mean(data$age)
+```

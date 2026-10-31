@@ -1,0 +1,14 @@
+# Chapter 2: example Dockerfile (illustrative; expects your own main.R)
+FROM rocker/tidyverse:latest
+
+# Install R packages
+RUN R -e "install.packages(c('survival', 'ggplot2'))"
+
+# Copy project files
+COPY . /app
+
+# Set working directory
+WORKDIR /app
+
+# Command to run the application
+CMD ["Rscript", "main.R"]
